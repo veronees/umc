@@ -15,7 +15,6 @@ public class Term extends BaseEntity {
     private Long id;
 
     private String name;
-
     private Boolean agreedStatus;
 
     @ManyToOne(fetch = FetchType.LAZY)
