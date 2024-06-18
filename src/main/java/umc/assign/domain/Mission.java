@@ -24,11 +24,8 @@ public class Mission extends BaseEntity {
     private RestaurantType restaurantType;
 
     private Integer missionPrice;
-
     private Integer successPoint;
-
     private Integer dDay;
-
     private String region;
 
     //미션 양방향 매핑
