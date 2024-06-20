@@ -26,4 +26,11 @@ public class MemberMission extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     private MissionStatus status;
+
+    public void addMemberMission(Member member, Mission mission) {
+        this.member = member;
+        this.mission = mission;
+        member.addMemberMission(this);
+        mission.addMemberMission(this);
+    }
 }

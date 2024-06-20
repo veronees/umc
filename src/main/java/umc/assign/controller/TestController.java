@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import umc.assign.apiPayload.ApiResponse;
 import umc.assign.apiPayload.code.status.SuccessStatus;
-import umc.assign.dto.TempExceptionDTO;
+import umc.assign.apiPayload.dto.TempExceptionDTO;
 import umc.assign.service.TempQueryService;
 
 @RestController

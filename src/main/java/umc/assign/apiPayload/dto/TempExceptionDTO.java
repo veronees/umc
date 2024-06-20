@@ -1,4 +1,4 @@
-package umc.assign.dto;
+package umc.assign.apiPayload.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

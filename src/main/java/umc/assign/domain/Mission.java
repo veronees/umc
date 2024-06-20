@@ -18,17 +18,23 @@ public class Mission extends BaseEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String restaurantName;
-
-    @Enumerated(EnumType.STRING)
-    private RestaurantType restaurantType;
+    @ManyToOne
+    @JoinColumn(name = "restaurant_id")
+    private Restaurant restaurant;
 
     private Integer missionPrice;
     private Integer successPoint;
     private Integer dDay;
-    private String region;
 
     //미션 양방향 매핑
     @OneToMany(mappedBy = "mission")
     private List<MemberMission> memberMissions = new ArrayList<>();
+
+    public void addRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public void addMemberMission(MemberMission memberMission) {
+        memberMissions.add(memberMission);
+    }
 }
