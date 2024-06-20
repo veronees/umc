@@ -2,6 +2,7 @@ package umc.assign.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 import umc.assign.domain.common.BaseEntity;
 import umc.assign.domain.enums.Gender;
 
@@ -26,6 +27,8 @@ public class Member extends BaseEntity {
     private String address;
     private String email;
     private String phoneNumber;
+
+    @ColumnDefault("0")
     private Integer pointAmount;
 
     // 미션 전부 양방향 매핑
@@ -40,4 +43,8 @@ public class Member extends BaseEntity {
 
     @OneToMany(mappedBy = "member")
     private List<MemberMission> memberMissions = new ArrayList<>();
+
+    public void addMemberMission(MemberMission memberMission) {
+        memberMissions.add(memberMission);
+    }
 }
