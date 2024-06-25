@@ -30,7 +30,7 @@ spring:
       on-profile: blue
 
 server:
-  port: 8881
+  port: 8080
   serverAddress: 3.34.151.10
 
 serverName: blue_server
@@ -43,7 +43,7 @@ spring:
       on-profile: green
 
 server:
-  port: 8882
+  port: 8081
   serverAddress: 3.34.151.10
 
 serverName: green_server
