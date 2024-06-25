@@ -4,11 +4,8 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import umc.assign.validation.annotation.AlreadyChallengeMission;
 import umc.assign.validation.annotation.NotExistRestaurant;
 import umc.assign.web.repository.RestaurantRepository;
-
-import java.util.List;
 
 @Component
 @RequiredArgsConstructor
